@@ -17,14 +17,15 @@
 - Configured model IDs: `muse-voice-transcribe-1.0`, `muse-spark-1.3`, `muse-wonder-1.0`, `muse-image-1.0`, `sam-3.1`.
 - Active calls: Voice Transcribe and Spark. Wonder fallback is not wired; Muse Image and SAM are not called. Do not claim those models were used in the demo.
 - Public fixtures are synthetic; no real PII or real locations. No actor voice recordings are included.
+- Live E2E on 2026-10-27 Dhaka time: 3/3 text-only synthetic visits (bn/en/ar) reached review as `pending_review`, were approved by the demo reviewer, and appeared in the ledger. Details and limitations: [docs/LIVE_E2E_TEST.md](docs/LIVE_E2E_TEST.md).
 
 ## Release status
 
 - Production URL: https://alive-bangladesh-coordinator-meta-a.vercel.app (deployment READY; production alias returned HTTP 200). Build used Next.js 16.4.3 and completed on Vercel. The build emitted a warning that the `eslint` option in `next.config.mjs` is no longer supported by Next 16; it did not block deployment.
 - Vercel project `alive-bangladesh-coordinator-meta-ai` is connected to the public GitHub repository. Public curl checks returned HTTP 200 for `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger`.
 - Public GitHub URL: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai (PUBLIC; `master` pushed). No repository license has been selected or added.
-- Demo video URL: TODO. Script prepared at [docs/DEMO_SCRIPT_3MIN.md](docs/DEMO_SCRIPT_3MIN.md); no video has been recorded.
-- Submission portal: [provided submission URL](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/submit) resolves to the event information page in this check; an authenticated submission form was not verified. [Official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon)
+- Demo video URL: NOT AVAILABLE. OBS did not remain open, and the available desktop capture included unrelated private application content, so no recording or upload was made. Script: [docs/DEMO_SCRIPT_3MIN.md](docs/DEMO_SCRIPT_3MIN.md).
+- Submission portal: NOT VERIFIED. The requested event URL opened the public event information page, which showed “Sign In” and no “Submit Project” control. No authenticated submission form was reached. [Official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon)
 - Submission status: NOT SUBMITTED.
 
 ## Before submission
@@ -32,6 +33,8 @@
 - [x] Authenticate GitHub and create/push a public repo. Review/select a license before submission.
 - [ ] Select a project license before publishing a public repository.
 - [x] Deploy to Vercel and verify `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger` return HTTP 200. Review route/API behavior with durable storage and server-side reviewer authentication before real participant use.
+- [x] Record the live synthetic text-only E2E run and its limits in [docs/LIVE_E2E_TEST.md](docs/LIVE_E2E_TEST.md).
 - [ ] Add server-side reviewer authentication and durable storage before exposing review actions publicly.
-- [ ] Record a three-minute synthetic-only demo and publish its URL.
+- [ ] Record a three-minute synthetic-only demo and publish its URL; use a clean capture window that does not show private desktop content.
 - [ ] Confirm the current submission form and submit before the official deadline.
+- [ ] Create [docs/POST_SUBMISSION_CUSTOM_DOMAIN.md](docs/POST_SUBMISSION_CUSTOM_DOMAIN.md) after submission, as requested; it has not been created because submission is not confirmed.

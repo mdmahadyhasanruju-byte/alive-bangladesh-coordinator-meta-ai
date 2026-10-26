@@ -14,12 +14,12 @@ function sourceFor(refs: EvidenceRef[], predicate: (ref: EvidenceRef) => boolean
 
 export function generateImpactNote(visit: Visit, extraction: Extraction, ledger: ActionLedgerItem): string {
   const refs = ledger.evidence_refs;
-  const audioSource = sourceFor(refs, (ref) => ref.type === 'audio_segment');
+  const audioSource = sourceFor(refs, (ref) => ref.type === 'audio_segment' || ref.type === 'text');
   const needSource = sourceFor(refs, (ref) => ref.type === 'audio_segment' || ref.type === 'text');
   const descriptionSentences = (extraction.description_evidence_backed ?? ledger.description_evidence_backed)
     .split(/(?<=[.!?।])\s+/u).filter(Boolean);
   const description = descriptionSentences.length
-    ? descriptionSentences.map((sentence) => `${sentence} ${audioSource === '[unverified]' ? audioSource : `[source: linked ${audioSource.slice(8, -1)}]`}`).join(' ')
+    ? descriptionSentences.map((sentence) => `${sentence} ${audioSource === '[unverified]' ? audioSource : `[source: linked ${audioSource.slice(9, -1)}]`}`).join(' ')
     : `Not provided ${audioSource}`;
   const commitment = ledger.commitment
     ? `${ledger.commitment} ${audioSource}`
@@ -30,7 +30,7 @@ export function generateImpactNote(visit: Visit, extraction: Extraction, ledger:
   const deadline = ledger.deadline_only_if_unambiguous
     ? `${ledger.deadline_only_if_unambiguous} ${audioSource}`
     : 'Unknown - needs clarification [unverified]';
-  const evidenceCount = refs.filter((ref) => ref.type === 'audio_segment').length;
+  const evidenceCount = refs.filter((ref) => ref.type === 'audio_segment' || ref.type === 'text').length;
 
   return [
     `Field Visit: ${visit.id ?? ledger.visit_id} | Lang: ${visit.lang ?? 'unknown'} | Date: ${visit.created_at ?? ledger.created_at} [source: visit record]`,
@@ -41,7 +41,7 @@ export function generateImpactNote(visit: Visit, extraction: Extraction, ledger:
     `Deadline: ${deadline}`,
     `Missing Info: ${ledger.missing_info.join(', ') || 'None recorded'} [source: draft ledger]`,
     `Follow-up: ${ledger.follow_up || 'None recorded'} [source: draft ledger]`,
-    `Evidence Refs: ${evidenceCount} segments linked [source: evidence linker]`,
+    `Evidence Refs: ${evidenceCount} evidence references linked [source: evidence linker]`,
     `Review Status: ${ledger.status} - requires human approval [source: draft ledger]`,
     `Confidence: ${ledger.confidence} (model estimate, not truth) [unverified]`,
     'Attribution: model-generated draft; participant statements are evidence-linked; no human approval recorded [unverified]',

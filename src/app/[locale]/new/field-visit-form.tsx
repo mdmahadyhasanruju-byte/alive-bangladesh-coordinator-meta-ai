@@ -6,6 +6,7 @@ import Link from 'next/link';
 import bn from '@/i18n/bn.json';
 import en from '@/i18n/en.json';
 import ar from '@/i18n/ar.json';
+import { saveClientVisit, type ClientVisitRecord } from '@/db/client-demo-store';
 
 const messages = { bn, en, ar };
 type Locale = keyof typeof messages;
@@ -49,8 +50,9 @@ export default function FieldVisitForm({ locale }: { locale: Locale }) {
           consent,
         }),
       });
-      const result = await response.json() as { visit_id?: string; error?: string };
-      if (!response.ok || !result.visit_id) throw new Error(result.error || 'Unable to create the visit draft');
+      const result = await response.json() as { visit_id?: string; error?: string; record?: ClientVisitRecord };
+      if (!response.ok || !result.visit_id || !result.record) throw new Error(result.error || 'Unable to create the visit draft');
+      saveClientVisit(result.record);
       router.push(`/${locale}/review/${result.visit_id}`);
     } catch (caught) {
       setError(caught instanceof Error ? caught.message : 'Unable to create the visit draft');

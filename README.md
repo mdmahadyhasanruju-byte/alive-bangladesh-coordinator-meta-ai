@@ -8,6 +8,13 @@ Anyone can continue from anywhere; the weakest soul ever can continue through me
 
 The project is an MVP, not the complete meUus ecosystem. See [HACKATHON_NEW.md](HACKATHON_NEW.md) for the pre-existing/new-work boundary and [the bridge note](docs/meUus_to_aLive_BRIDGE.md) for the conceptual mapping.
 
+## Hackathon links
+
+- Live app: https://alive-bangladesh-coordinator-meta-a.vercel.app
+- Public repository: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai
+- Demo video: NOT RECORDED / URL PENDING. The live E2E verification is documented in [docs/LIVE_E2E_TEST.md](docs/LIVE_E2E_TEST.md); no video URL is available yet.
+- Track: Startup. Problem theme: Build for Your World.
+
 ## Workflow
 
 ```mermaid
@@ -25,7 +32,7 @@ No external message is sent. A correction remains pending review. An approved le
 
 ## Models and implementation status
 
-- Active API paths: `muse-voice-transcribe-1.0` for transcription and `muse-spark-1.3` for structured extraction and optional image observations.
+- Server-side adapter paths are wired for `muse-voice-transcribe-1.0` transcription and `muse-spark-1.3` structured extraction. The recorded live E2E run used synthetic text fixtures; it did not call these model APIs. Without `META_API_KEY`, the adapters use synthetic fallback responses.
 - `muse-wonder-1.0` is configured as a model identifier but not currently wired as a fallback.
 - `muse-image-1.0` and `sam-3.1` are listed in adapter configuration but are not called by this implementation.
 
@@ -33,7 +40,7 @@ Meta API credentials are read server-side only. Public demo files are synthetic 
 
 ## Tech stack
 
-Next.js 16.4.3, TypeScript, pnpm, Tailwind CSS, next-intl message JSON, Meta Model API adapters, and an in-memory demo store. The demo store resets with its server process and is not a production database. Review API authentication is not implemented.
+Next.js 16.4.3, TypeScript, pnpm, Tailwind CSS, next-intl message JSON, Meta Model API adapters, and browser-tab `sessionStorage` for the live demo flow. Demo records clear when that tab session ends. This is not durable storage, and reviewer authentication is not implemented.
 
 ## Run locally
 
@@ -47,9 +54,10 @@ Open `/bn`, `/en`, or `/ar`. Build with `pnpm --ignore-workspace run build`; run
 ## Evidence and submission preparation
 
 - [Test evidence and metrics](docs/TEST_EVIDENCE.md)
+- [Live E2E test record](docs/LIVE_E2E_TEST.md)
 - [Three-minute demo script](docs/DEMO_SCRIPT_3MIN.md)
 - [Hackathon submission checklist](SUBMISSION_CHECKLIST.md)
 - [New work boundary](HACKATHON_NEW.md)
 - [Architecture and global direction](02_ARCHITECTURE_GLOBAL.md)
 
-Hackathon details are recorded against the [official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon). A public GitHub repository, live deployment, and submitted demo URL are NOT VERIFIED yet.
+The active production alias returned HTTP 200 for `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger` on 2026-10-27. The live E2E report covers three synthetic text-only records through human approval. Audio upload, photo analysis, durable storage, and real participant data were not tested. Hackathon details are recorded against the [official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon). Submission status: NOT SUBMITTED.

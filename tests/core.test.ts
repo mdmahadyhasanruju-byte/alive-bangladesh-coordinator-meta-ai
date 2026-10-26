@@ -51,4 +51,16 @@ describe('evidence-linked core', () => {
     const note = generateImpactNote({ id: 'visit-1', lang: 'en', created_at: '2026-10-27' }, {}, ledger);
     assert.ok(note.split('\n').every((line) => /\[(?:source:|unverified|human correction)/i.test(line)));
   });
+
+  it('uses text references for text-only visits', () => {
+    const refs = linkEvidence('visit-text', transcript, [{ start_ms: 0, end_ms: transcript.length * 100, text: transcript }], {
+      need: 'clean water',
+      description_evidence_backed: 'We need clean water for the village.',
+    }, null, ['text']);
+    const ledger = proposeLedger('visit-text', { need: 'Clean water' }, refs);
+    const note = generateImpactNote({ id: 'visit-text', lang: 'en', created_at: '2026-10-27' }, { description_evidence_backed: 'We need clean water for the village.' }, ledger);
+    assert.ok(refs.every((ref) => ref.type === 'text'));
+    assert.match(note, /Description: .*\[source: linked text:0\]/);
+    assert.match(note, /Evidence Refs: 2 evidence references linked/);
+  });
 });

@@ -1,6 +1,6 @@
 # Synthetic Test Evidence
 
-- Run date: 2026-10-26T20:33:06.790Z
+- Run date: 2026-10-26T21:20:17.743Z
 - Node version: v24.18.0
 - Model versions configured: `muse-voice-transcribe-1.0`, `muse-spark-1.3`
 - Data disclaimer: synthetic scripted dialogue and placeholder image only; no real participant data or real locations.

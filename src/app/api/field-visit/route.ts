@@ -102,12 +102,27 @@ export async function POST(request: Request) {
     const extraction = await extractStructured(transcript, segments, lang);
     const image = await analyzeImageOptional(photo ?? undefined, photoMime);
     const enrichedExtraction = { ...extraction, source_transcript: transcript };
-    const segmentTypes: Array<'audio_segment' | 'text'> = [
-      ...(audio && text ? ['text' as const] : []),
-      ...segments.slice(audio && text ? 1 : 0).map(() => 'audio_segment' as const),
-    ];
-    if (!audio) segmentTypes.push('text');
+    const segmentTypes: Array<'audio_segment' | 'text'> = audio
+      ? [
+          ...(text ? ['text' as const] : []),
+          ...segments.slice(text ? 1 : 0).map(() => 'audio_segment' as const),
+        ]
+      : segments.map(() => 'text' as const);
     const evidenceRefs = linkEvidence(visitId, transcript, segments, enrichedExtraction, image.hash, segmentTypes);
+    if (!audio) {
+      evidenceRefs.forEach((ref) => {
+        if (ref.type !== 'audio_segment') return;
+        const index = Number(ref.ref.split(':')[1]);
+        const segment = segments[index];
+        const start = segment ? transcript.indexOf(segment.text) : -1;
+        ref.type = 'text';
+        ref.ref = `text:${index}`;
+        ref.start_char = start >= 0 ? start : 0;
+        ref.end_char = start >= 0 && segment ? start + segment.text.length : 0;
+        delete ref.start_ms;
+        delete ref.end_ms;
+      });
+    }
     const ledger = proposeLedger(visitId, enrichedExtraction, evidenceRefs);
     const visit = { id: visitId, lang, created_at: createdAt, text };
     const draft = generateImpactNote(visit, enrichedExtraction, ledger);
@@ -125,7 +140,19 @@ export async function POST(request: Request) {
       approvals: [],
     };
     fieldVisitStore.set(visitId, record);
-    return NextResponse.json({ visit_id: visitId, ledger_id: ledger.id, draft });
+    const clientRecord = {
+      visit,
+      transcript,
+      segments,
+      photo_hash: image.hash,
+      image_observations: image.observations,
+      extraction: enrichedExtraction,
+      ledger,
+      evidence_refs: evidenceRefs,
+      draft,
+      approvals: [],
+    };
+    return NextResponse.json({ visit_id: visitId, ledger_id: ledger.id, draft, record: clientRecord });
   } catch (error) {
     const code = typeof error === 'object' && error && 'code' in error ? String(error.code) : '';
     const message = code === 'INVALID_MEDIA'

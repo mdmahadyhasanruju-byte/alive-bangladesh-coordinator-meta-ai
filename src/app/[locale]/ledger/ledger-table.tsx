@@ -5,6 +5,7 @@ import Link from 'next/link';
 import bn from '@/i18n/bn.json';
 import en from '@/i18n/en.json';
 import ar from '@/i18n/ar.json';
+import { readClientVisits } from '@/db/client-demo-store';
 
 const messages = { bn, en, ar };
 type Locale = keyof typeof messages;
@@ -26,13 +27,31 @@ export default function LedgerTable({ locale }: { locale: Locale }) {
 
   useEffect(() => {
     let active = true;
+    const clientRows: LedgerRow[] = readClientVisits().map(({ visit, ledger, evidence_refs }) => ({
+      visit_id: visit.id,
+      need: ledger.need,
+      responsible: ledger.responsible_person_only_if_explicit,
+      deadline: ledger.deadline_only_if_unambiguous,
+      status: ledger.status,
+      evidence_count: evidence_refs.length,
+      created_at: visit.created_at,
+    }));
     fetch('/api/field-visit', { cache: 'no-store' })
       .then(async (response) => {
         if (!response.ok) throw new Error('Unable to load ledger');
         return response.json() as Promise<LedgerRow[]>;
       })
-      .then((data) => { if (active) setRows(data); })
-      .catch((caught: unknown) => { if (active) setError(caught instanceof Error ? caught.message : 'Unable to load ledger'); })
+      .then((data) => {
+        if (!active) return;
+        const merged = new Map(data.map((row) => [row.visit_id, row]));
+        clientRows.forEach((row) => merged.set(row.visit_id, row));
+        setRows([...merged.values()].sort((a, b) => b.created_at.localeCompare(a.created_at)));
+      })
+      .catch((caught: unknown) => {
+        if (!active) return;
+        if (clientRows.length) setRows(clientRows);
+        else setError(caught instanceof Error ? caught.message : 'Unable to load ledger');
+      })
       .finally(() => { if (active) setLoading(false); });
     return () => { active = false; };
   }, []);
