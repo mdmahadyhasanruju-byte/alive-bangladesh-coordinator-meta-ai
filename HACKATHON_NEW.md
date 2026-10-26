@@ -7,7 +7,7 @@
 
 ## NEW during hackathon (in this acting folder, commits dated 2026-10-27+)
 
-- Coordinator Agent documentation, Next.js scaffold, and source code; initial commits `26c7287` and `e8eb60a` are dated 2026-10-27. See the current Git log for later implementation commits.
+- Coordinator Agent documentation, Next.js scaffold, and source code; commits `26c7287` (PEN + SCAFFOLD), `e8eb60a` (build fix), and `c2e2cf0` (MVP, tests, and release docs) are dated 2026-10-27.
 - Transcription adapter configured for `muse-voice-transcribe-1.0`; structured extraction calls `muse-spark-1.3` with an evidence/no-invention guard. `muse-wonder-1.0` is named in configuration but is NOT currently wired as an automatic fallback.
 - Optional image adapter computes a SHA-256 evidence hash and uses Spark vision when configured. `muse-image-1.0` and `sam-3.1` are configuration identifiers only; this prototype does not call those models.
 - Evidence linker, pending-review ledger, draft note with source markers, and Bengali/English/Arabic new-visit, review, and ledger UI.

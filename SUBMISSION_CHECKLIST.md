@@ -8,8 +8,7 @@
 
 ## New-work provenance
 
-- Existing verified acting-folder commits: `26c7287` — PEN + SCAFFOLD, 2026-10-27; `e8eb60a` — FIX BUILD, 2026-10-27.
-- Additional coordinator implementation and submission-prep files are being recorded in the current dated local commit. Verify the final Git log before sharing.
+- Verified acting-folder commits: `26c7287` — PEN + SCAFFOLD, 2026-10-27; `e8eb60a` — FIX BUILD, 2026-10-27; `c2e2cf0` — HACKATHON BUILD / evidence-linked MVP and release docs, 2026-10-27.
 
 ## Product and evidence
 
