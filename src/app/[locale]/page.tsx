@@ -35,7 +35,8 @@ export default async function LocalePage({
           <h1>{copy.app_title}</h1>
           <p className="intro">Evidence-linked community input for human review. No action is approved automatically.</p>
         </div>
-        <button className="primary-button" type="button">＋ {copy.new_visit}</button>
+        <Link className="primary-button" href={`/${locale}/new`}>＋ {copy.new_visit}</Link>
+        <Link className="secondary-button" href={`/${locale}/ledger`}>{copy.action_ledger}</Link>
       </section>
       <section className="workspace-grid">
         <article className="panel">

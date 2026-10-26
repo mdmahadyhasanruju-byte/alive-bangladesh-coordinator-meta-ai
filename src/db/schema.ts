@@ -14,8 +14,10 @@ export type EvidenceRef = {
   visit_id: string;
   type: 'audio_segment' | 'photo' | 'text';
   ref: string;
-  start?: number;
-  end?: number;
+  start_ms?: number;
+  end_ms?: number;
+  start_char?: number;
+  end_char?: number;
   hash?: string;
 };
 
@@ -24,13 +26,15 @@ export type ActionLedger = {
   visit_id: string;
   need: string;
   description_evidence_backed: string;
-  commitment?: string;
-  responsible_person_only_if_explicit?: string;
-  deadline_only_if_unambiguous?: string;
+  commitment: string | null;
+  responsible_person_only_if_explicit: string | null;
+  deadline_only_if_unambiguous: string | null;
   status: 'pending_review' | 'approved' | 'rejected';
   confidence: number;
   missing_info: string[];
   follow_up: string;
+  evidence_refs: EvidenceRef[];
+  created_at: string;
 };
 
 export type Approval = {

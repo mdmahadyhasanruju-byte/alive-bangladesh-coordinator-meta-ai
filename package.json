@@ -6,7 +6,8 @@
     "dev": "next dev --webpack",
     "build": "next build --webpack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "tsc scripts/run-tests.ts --outDir .tmp --module commonjs --moduleResolution node --target ES2022 --esModuleInterop --skipLibCheck && node .tmp/scripts/run-tests.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.118.0",
