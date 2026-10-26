@@ -20,18 +20,18 @@
 
 ## Release status
 
-- Deploy URL: TODO. NOT DEPLOYED. `wrangler.toml` contains only Worker name and compatibility date; `wrangler deploy --dry-run` fails with “Missing entry-point to Worker script or to assets directory.” Wrangler 4.153.0 is installed locally, but `wrangler whoami` reports the stored token expired and unable to refresh because the auth server could not be reached. Cloudflare's current Next.js guide recommends vinext and describes it as beta; no migration or deployment has been performed. [Cloudflare Next.js guide](https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/)
-- Vercel fallback: NOT DEPLOYED. `vercel whoami` failed while fetching CLI package/auth metadata; no `.vercel` project link exists, so `vercel --prod` was not run.
-- Public GitHub URL: TODO. No Git remote is configured. `gh auth status` reports the saved GitHub token is invalid, so the public repo was not created and nothing was pushed. No repository license has been selected or added.
+- Production URL: https://alive-bangladesh-coordinator-meta-a.vercel.app (deployment READY; production alias returned HTTP 200). Build used Next.js 16.4.3 and completed on Vercel. The build emitted a warning that the `eslint` option in `next.config.mjs` is no longer supported by Next 16; it did not block deployment.
+- Vercel project `alive-bangladesh-coordinator-meta-ai` is connected to the public GitHub repository. Public curl checks returned HTTP 200 for `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger`.
+- Public GitHub URL: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai (PUBLIC; `master` pushed). No repository license has been selected or added.
 - Demo video URL: TODO. Script prepared at [docs/DEMO_SCRIPT_3MIN.md](docs/DEMO_SCRIPT_3MIN.md); no video has been recorded.
 - Submission portal: [provided submission URL](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/submit) resolves to the event information page in this check; an authenticated submission form was not verified. [Official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon)
 - Submission status: NOT SUBMITTED.
 
 ## Before submission
 
-- [ ] Authenticate GitHub and create/push a public repo after reviewing included files and license.
+- [x] Authenticate GitHub and create/push a public repo. Review/select a license before submission.
 - [ ] Select a project license before publishing a public repository.
-- [ ] Select a supported hosting path; deploy and verify `/bn`, `/en`, `/ar`, form, review, and ledger routes.
+- [x] Deploy to Vercel and verify `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger` return HTTP 200. Review route/API behavior with durable storage and server-side reviewer authentication before real participant use.
 - [ ] Add server-side reviewer authentication and durable storage before exposing review actions publicly.
 - [ ] Record a three-minute synthetic-only demo and publish its URL.
 - [ ] Confirm the current submission form and submit before the official deadline.
