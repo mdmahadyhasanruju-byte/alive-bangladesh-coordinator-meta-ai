@@ -1,0 +1,15 @@
+{
+  "app_title": "aLive Bangladesh Coordinator",
+  "new_visit": "New Field Visit",
+  "upload_audio": "Upload Voice Note (60s)",
+  "upload_photo": "Optional Photo",
+  "transcript": "Transcript",
+  "draft_note": "Draft Impact Note",
+  "action_ledger": "Action Ledger",
+  "missing_info": "Missing Information",
+  "approve": "Approve",
+  "reject": "Reject",
+  "correct": "Correct",
+  "deadline_unknown": "Deadline: Unknown - needs clarification",
+  "evidence": "Evidence"
+}

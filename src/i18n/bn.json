@@ -1,0 +1,15 @@
+{
+  "app_title": "aLive Bangladesh Coordinator",
+  "new_visit": "নতুন মাঠ পরিদর্শন",
+  "upload_audio": "ভয়েস নোট আপলোড করুন (৬০ সেকেন্ড)",
+  "upload_photo": "ঐচ্ছিক ছবি",
+  "transcript": "প্রতিলিপি",
+  "draft_note": "খসড়া প্রভাব নোট",
+  "action_ledger": "কর্ম তালিকা",
+  "missing_info": "অনুপস্থিত তথ্য",
+  "approve": "অনুমোদন",
+  "reject": "প্রত্যাখ্যান",
+  "correct": "সংশোধন",
+  "deadline_unknown": "সময়সীমা: অজানা — ব্যাখ্যা প্রয়োজন",
+  "evidence": "প্রমাণ"
+}
