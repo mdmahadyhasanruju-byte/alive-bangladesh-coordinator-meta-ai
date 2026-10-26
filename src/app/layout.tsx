@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import './[locale]/globals.css';
@@ -15,7 +14,7 @@ export default async function RootLayout({
 }: Readonly<{ children: React.ReactNode; params: Promise<{ locale?: string }> }>) {
   const { locale: requestedLocale } = await params;
   const locale = requestedLocale ?? routing.defaultLocale;
-  if (!hasLocale(routing.locales, locale)) notFound();
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) notFound();
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="h-full antialiased">
