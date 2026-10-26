@@ -21,6 +21,7 @@
 ## Release status
 
 - Deploy URL: TODO. NOT DEPLOYED. `wrangler.toml` contains only Worker name and compatibility date; `wrangler deploy --dry-run` fails with “Missing entry-point to Worker script or to assets directory.” Wrangler 4.153.0 is installed locally, but `wrangler whoami` reports the stored token expired and unable to refresh because the auth server could not be reached. Cloudflare's current Next.js guide recommends vinext and describes it as beta; no migration or deployment has been performed. [Cloudflare Next.js guide](https://developers.cloudflare.com/workers/framework-guides/web-apps/nextjs/)
+- Vercel fallback: NOT DEPLOYED. `vercel whoami` failed while fetching CLI package/auth metadata; no `.vercel` project link exists, so `vercel --prod` was not run.
 - Public GitHub URL: TODO. No Git remote is configured. `gh auth status` reports the saved GitHub token is invalid, so the public repo was not created and nothing was pushed. No repository license has been selected or added.
 - Demo video URL: TODO. Script prepared at [docs/DEMO_SCRIPT_3MIN.md](docs/DEMO_SCRIPT_3MIN.md); no video has been recorded.
 - Submission portal: [provided submission URL](https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/submit) resolves to the event information page in this check; an authenticated submission form was not verified. [Official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon)
