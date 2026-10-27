@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { MeyooLauncher } from '@/components/meyoo-launcher';
 import './[locale]/globals.css';
 
 export const metadata: Metadata = {
@@ -18,7 +19,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className="h-full antialiased">
-      <body className="min-h-full">{children}</body>
+      <body className="min-h-full">{children}<MeyooLauncher /></body>
     </html>
   );
 }

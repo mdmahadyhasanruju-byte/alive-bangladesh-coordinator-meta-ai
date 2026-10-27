@@ -12,6 +12,7 @@
 
 ## Product and evidence
 
+- Phase 8 local build: 33 generated pages/routes, including `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/dashboard/ecosystem`, `/pillars/alive`, and `/21raWHox`. These V2 routes are NOT YET VERIFIED in production.
 - Current routes in successful local build: `/bn`, `/en`, `/ar`, `/bn/new`, `/en/new`, `/ar/new`, `/bn/ledger`, `/en/ledger`, `/ar/ledger`, dynamic review and API routes.
 - Tests A-K: 11/11 PASS in deterministic synthetic mode. Test evidence reports 100% evidence traceability and 0% deadline hallucination rate for these fixtures only; this is not a real-world model-quality evaluation.
 - Configured model IDs: `muse-voice-transcribe-1.0`, `muse-spark-1.3`, `muse-wonder-1.0`, `muse-image-1.0`, `sam-3.1`.
@@ -21,6 +22,8 @@
 
 ## Release status
 
+- V2 deployment: PENDING. After Vercel deploy, verify `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/pillars/alive`, `/21raWHox`, `/bn`, `/bn/new`, and `/bn/ledger` before marking these routes live.
+- Demo video: TODO — manual human recording. No automatic recording or upload was made.
 - Production URL: https://alive-bangladesh-coordinator-meta-a.vercel.app (deployment READY; production alias returned HTTP 200). Build used Next.js 16.4.3 and completed on Vercel. The build emitted a warning that the `eslint` option in `next.config.mjs` is no longer supported by Next 16; it did not block deployment.
 - Vercel project `alive-bangladesh-coordinator-meta-ai` is connected to the public GitHub repository. Public curl checks returned HTTP 200 for `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger`.
 - Public GitHub URL: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai (PUBLIC; `master` pushed). No repository license has been selected or added.

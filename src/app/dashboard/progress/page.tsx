@@ -1,0 +1,1 @@
+export default function ProgressPage() { return <><h1 className="text-3xl font-bold">Progress</h1><p className="mt-3 text-slate-600">Progress history is not yet stored. This prototype does not infer progress from activity.</p></>; }

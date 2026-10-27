@@ -1,6 +1,6 @@
 const nextConfig = {
+  distDir: '.next-build',
   experimental: { cpus: 1 },
-  eslint: { ignoreDuringBuilds: true }
 };
 
 export default nextConfig;
