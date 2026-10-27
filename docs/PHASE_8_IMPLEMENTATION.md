@@ -12,12 +12,11 @@ Add an initial Human OS layer and routes inside the Meta AI acting folder while 
 - Added the 21-question Zero-level reflection UI, dashboard, ecosystem, services, welcome, home, pillar, and 21raWHox pages.
 - Added a global meYoo launcher, demo AI and assessment endpoints, Supabase client helper, and draft SQL schema with owner-scoped RLS policies.
 - Expanded the README with the broader vision and implementation boundaries.
-- Set a separate ignored Next.js output directory `.next-build` because standard local build workers received Windows `EPERM` while creating folders under `.next`.
 
 ## Verified
 
 - `pnpm --ignore-workspace exec tsc --noEmit` — passed.
-- `pnpm --ignore-workspace run build` — passed using elevated filesystem access after the normal build worker failed with `EPERM`.
+- `pnpm --ignore-workspace run build` — passed using elevated filesystem access after the normal build worker failed with Windows `EPERM` while creating folders under Next.js's default `.next` output directory.
 - Build route table included `/welcome`, `/home`, `/services`, `/dashboard` routes, `/pillars/*`, `/21raWHox`, and existing `/bn`, `/en`, `/ar` aLive routes.
 - `git diff --check` — passed.
 
