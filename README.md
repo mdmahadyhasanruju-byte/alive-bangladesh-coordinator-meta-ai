@@ -15,7 +15,7 @@ The project is an MVP, not the complete meUus ecosystem. See [HACKATHON_NEW.md](
 - Public GitHub: [mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai](https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai)
 - Demo video: TODO — manual human recording; no video has been recorded or uploaded.
 
-V2 Human OS production route verification is pending. The local production build includes the routes listed above.
+V2 deployment `dpl_6aQcCxhcNkJMkuzJVYUse6x2dYLg` reached READY on 2026-10-27. The requested V2 and aLive production routes below returned HTTP 200; see [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for the checked route list.
 
 ## What is new Oct 27–Nov 4
 
