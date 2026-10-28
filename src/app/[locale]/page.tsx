@@ -1,7 +1,9 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
 import bn from '@/i18n/bn.json';
 import en from '@/i18n/en.json';
 import ar from '@/i18n/ar.json';
+import { EnglishHome } from './english-home';
 
 const messages = { bn, en, ar };
 const languages = [
@@ -10,11 +12,24 @@ const languages = [
   { code: 'ar', label: 'العربية' }
 ] as const;
 
+export async function generateMetadata({
+  params
+}: Readonly<{ params: Promise<{ locale: string }> }>): Promise<Metadata> {
+  const { locale } = await params;
+  if (locale !== 'en') return {};
+  return {
+    title: 'Welcome to aLive Bangladesh — meUus',
+    description:
+      'Evidence-linked community coordination for Bangladesh. Bangla voice notes become traceable drafts, and a human decides. Build for Your World · Startup Track.'
+  };
+}
+
 export default async function LocalePage({
   params
 }: Readonly<{ params: Promise<{ locale: string }> }>) {
   const { locale } = await params;
   if (!Object.hasOwn(messages, locale)) return null;
+  if (locale === 'en') return <EnglishHome />;
   const copy = messages[locale as keyof typeof messages];
 
   return (
