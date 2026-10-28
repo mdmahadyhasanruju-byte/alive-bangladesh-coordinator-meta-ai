@@ -7,8 +7,9 @@ const EN_CSS = `
 .en-topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;min-height:64px;padding:10px 0}
 .en-brand{display:flex;align-items:center;gap:11px;color:inherit;text-decoration:none;min-width:0}
 .en-mark{width:32px;height:32px;border-radius:999px;background:var(--green);color:#fff;display:grid;place-items:center;font-family:Fraunces,Georgia,serif;font-weight:700;font-size:14px;flex:0 0 auto}
-.en-brand-name{font-weight:600;font-size:15px;line-height:1.1;letter-spacing:-.01em}
-.en-brand-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.en-brand-name{display:block;font-weight:600;font-size:15px;line-height:1.1;letter-spacing:-.01em}
+.en-brand-text{display:flex;flex-direction:column;gap:6px;min-width:0}
+.en-brand-sub{display:block;font-size:11px;color:var(--muted)}
 .en-nav{display:none;align-items:center;gap:8px;font-size:12.5px}
 .en-nav a{text-decoration:none;color:var(--ink-2);padding:7px 12px;border-radius:999px;border:1px solid transparent;transition:.2s}
 .en-nav a:hover{background:var(--surface-2);color:var(--ink)}
@@ -34,7 +35,7 @@ const EN_CSS = `
 .en-btn-dark:hover{opacity:.92}
 .en-btn-line{border-color:var(--line);color:var(--ink);background:var(--surface)}
 .en-btn-line:hover{background:var(--surface-2)}
-.en-hero-note{font-size:11px;line-height:1.7;color:rgba(255,255,255,.55);margin:22px auto 0;max-width:560px}
+.en-hero-note{display:inline-block;font-size:10.5px;line-height:1.75;color:rgba(255,255,255,.82);margin:22px auto 0;max-width:480px;padding:7px 18px;border-radius:999px;background:rgba(18,22,18,.42);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .en-stats{display:grid;grid-template-columns:1fr;gap:10px;margin-top:44px;text-align:left}
 .en-stat{border-radius:16px;border:1px solid rgba(255,255,255,.16);background:rgba(18,22,18,.32);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:14px 16px}
 .en-stat strong{display:block;font-family:Fraunces,Georgia,serif;font-size:22px;line-height:1}
@@ -141,7 +142,7 @@ export function EnglishHome() {
           <div className="en-shell en-topbar">
             <a className="en-brand" href="/en">
               <span className="en-mark">m</span>
-              <span>
+              <span className="en-brand-text">
                 <span className="en-brand-name">meUus — Connecting Everything</span>
                 <span className="en-brand-sub">aLive Bangladesh · English</span>
               </span>
