@@ -13,7 +13,8 @@ The project is an MVP, not the complete meUus ecosystem. See [HACKATHON_NEW.md](
 - Primary aLive flow: [Bangla new field visit](https://alive-bangladesh-coordinator-meta-a.vercel.app/bn/new)
 - Human OS: [`/welcome`](https://alive-bangladesh-coordinator-meta-a.vercel.app/welcome), [`/home`](https://alive-bangladesh-coordinator-meta-a.vercel.app/home), [`/dashboard`](https://alive-bangladesh-coordinator-meta-a.vercel.app/dashboard), [`/pillars/alive`](https://alive-bangladesh-coordinator-meta-a.vercel.app/pillars/alive)
 - Public GitHub: [mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai](https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai)
-- Demo video: TODO — manual human recording; no video has been recorded or uploaded.
+- Demo walkthrough: TODO — manual screen recording; no walkthrough has been recorded or uploaded.
+- Premium Packing V2 pitch: [open `/pitch`](https://alive-bangladesh-coordinator-meta-a.vercel.app/pitch). Documentary film: [`/videos/aLive_Bangladesh.mp4`](https://alive-bangladesh-coordinator-meta-a.vercel.app/videos/aLive_Bangladesh.mp4) (3:21, 1080p). YouTube Unlisted upload: TODO.
 
 V2 deployment `dpl_6aQcCxhcNkJMkuzJVYUse6x2dYLg` reached READY on 2026-10-27. The requested V2 and aLive production routes below returned HTTP 200; see [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for the checked route list.
 
@@ -88,6 +89,7 @@ Open `/bn`, `/en`, or `/ar`. Build with `pnpm --ignore-workspace run build`; run
 
 ## Evidence and submission preparation
 
+- Premium Packing V2: the film is integrated into `/pitch`. Five screenshot-style images supplied from the Pictures folder are retained under `public/images/packing/` for reference only; they contain unverified embedded statistics and testimonials and are not used as evidence. The four requested `/mnt/data/resource` artwork files were unavailable, so the page uses a poster frame from the supplied film.
 - [Synthetic test evidence](docs/TEST_EVIDENCE.md): 11/11 A-K checks passed in the documented synthetic run; reported 100% traceability and 0% deadline hallucination apply only to those fixtures, not real-world quality.
 
 - [Test evidence and metrics](docs/TEST_EVIDENCE.md)

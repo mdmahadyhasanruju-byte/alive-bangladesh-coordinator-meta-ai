@@ -44,6 +44,7 @@ yarn-error.log*
 next-env.d.ts
 
 # local build and package caches
+/aLive Bangladesh.mp4
 /.pnpm-store/
 /.npm-cache/
 /.tmp/

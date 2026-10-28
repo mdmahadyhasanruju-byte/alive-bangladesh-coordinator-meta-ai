@@ -12,7 +12,7 @@
 
 ## Product and evidence
 
-- Phase 8 build: 33 generated pages/routes, including `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/dashboard/ecosystem`, `/pillars/alive`, and `/21raWHox`.
+- Phase 8 + pitch build: 34 generated pages/routes, including `/pitch`, `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/dashboard/ecosystem`, `/pillars/alive`, and `/21raWHox`.
 - Current routes in successful local build: `/bn`, `/en`, `/ar`, `/bn/new`, `/en/new`, `/ar/new`, `/bn/ledger`, `/en/ledger`, `/ar/ledger`, dynamic review and API routes.
 - Tests A-K: 11/11 PASS in deterministic synthetic mode. Test evidence reports 100% evidence traceability and 0% deadline hallucination rate for these fixtures only; this is not a real-world model-quality evaluation.
 - Configured model IDs: `muse-voice-transcribe-1.0`, `muse-spark-1.3`, `muse-wonder-1.0`, `muse-image-1.0`, `sam-3.1`.
@@ -24,7 +24,11 @@
 
 - V2 deployment: READY on 2026-10-27. Vercel deployment `dpl_6aQcCxhcNkJMkuzJVYUse6x2dYLg` deployed commit `0918d84` and assigned the production alias below.
 - V2 production HTTP checks: `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/pillars/alive`, `/21raWHox`, `/bn`, `/bn/new`, and `/bn/ledger` all returned HTTP 200 from `https://alive-bangladesh-coordinator-meta-a.vercel.app`.
-- Demo video: TODO — manual human recording. No automatic recording or upload was made.
+- Premium packing page: `/pitch` (Vercel HTTP check pending).
+- Video asset: `/videos/aLive_Bangladesh.mp4` (Vercel HTTP check pending; source file 3:21, 1920×1080, H.264/AAC).
+- YouTube Unlisted URL: TODO after upload; not yet verified.
+- Five supplied screenshot-style image references are in `public/images/packing/`. Their embedded mock statistics and testimonials are unverified and they are not presented as evidence. The four requested `/mnt/data/resource` artwork files were not available in this environment.
+- Demo video: integrated in app from the supplied file; external YouTube upload still TODO. No automatic recording was made.
 - Production URL: https://alive-bangladesh-coordinator-meta-a.vercel.app (deployment READY; V2 route checks above returned HTTP 200). Build used Next.js 16.4.3 and completed on Vercel.
 - Vercel project `alive-bangladesh-coordinator-meta-ai` is connected to the public GitHub repository. Public curl checks returned HTTP 200 for `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger`.
 - Public GitHub URL: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai (PUBLIC; `master` pushed). No repository license has been selected or added.
