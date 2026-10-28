@@ -13,10 +13,12 @@ The project is an MVP, not the complete meUus ecosystem. See [HACKATHON_NEW.md](
 - Primary aLive flow: [Bangla new field visit](https://alive-bangladesh-coordinator-meta-a.vercel.app/bn/new)
 - Human OS: [`/welcome`](https://alive-bangladesh-coordinator-meta-a.vercel.app/welcome), [`/home`](https://alive-bangladesh-coordinator-meta-a.vercel.app/home), [`/dashboard`](https://alive-bangladesh-coordinator-meta-a.vercel.app/dashboard), [`/pillars/alive`](https://alive-bangladesh-coordinator-meta-a.vercel.app/pillars/alive)
 - Public GitHub: [mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai](https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai)
-- Demo walkthrough: TODO — manual screen recording; no walkthrough has been recorded or uploaded.
-- Premium Packing V2 pitch: [open `/pitch`](https://alive-bangladesh-coordinator-meta-a.vercel.app/pitch). Documentary film: [`/videos/aLive_Bangladesh.mp4`](https://alive-bangladesh-coordinator-meta-a.vercel.app/videos/aLive_Bangladesh.mp4) (3:21, 1080p). YouTube Unlisted upload: TODO.
+- Premium Packing V2 pitch: [open `/pitch`](https://alive-bangladesh-coordinator-meta-a.vercel.app/pitch)
+- Submission film on YouTube (Unlisted): https://youtu.be/BvJYe5-Hevo
+- Local film file: [`/videos/aLive_Bangladesh.mp4`](https://alive-bangladesh-coordinator-meta-a.vercel.app/videos/aLive_Bangladesh.mp4) (3:21, 1080p, 74 MB)
+- Demo walkthrough (screen recording of the synthetic flow): NOT RECORDED — still TODO.
 
-V2 deployment `dpl_6aQcCxhcNkJMkuzJVYUse6x2dYLg` reached READY on 2026-10-27. The requested V2 and aLive production routes below returned HTTP 200; see [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for the checked route list.
+Production deployment `dpl_51Z5utC5VxDph7BQGDoDRqnPHabE` (`alive-bangladesh-coordinator-meta-ref1o6xal.vercel.app`) reached READY on 2026-10-28 and holds the production alias. All 11 submission routes and the film file were re-checked after deployment (HTTP 200; the video range request returned 206). See [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for the checked route list.
 
 ## What is new Oct 27–Nov 4
 
@@ -46,7 +48,7 @@ The draft database schema is in [supabase/migrations/001_initial.sql](supabase/m
 
 - Live app: https://alive-bangladesh-coordinator-meta-a.vercel.app
 - Public repository: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai
-- Demo video: NOT RECORDED / URL PENDING. The live E2E verification is documented in [docs/LIVE_E2E_TEST.md](docs/LIVE_E2E_TEST.md); no video URL is available yet.
+- Submission film: https://youtu.be/BvJYe5-Hevo (Unlisted, uploaded 2026-10-28). This is the supplied documentary film, not a screen recording of the synthetic flow; a walkthrough recording is still TODO. The live E2E verification is documented in [docs/LIVE_E2E_TEST.md](docs/LIVE_E2E_TEST.md).
 - Track: Startup. Problem theme: Build for Your World.
 
 ## Workflow
@@ -89,7 +91,7 @@ Open `/bn`, `/en`, or `/ar`. Build with `pnpm --ignore-workspace run build`; run
 
 ## Evidence and submission preparation
 
-- Premium Packing V2: the film is integrated into `/pitch`. Five screenshot-style images supplied from the Pictures folder are retained under `public/images/packing/` for reference only; they contain unverified embedded statistics and testimonials and are not used as evidence. The four requested `/mnt/data/resource` artwork files were unavailable, so the page uses a poster frame from the supplied film.
+- Premium Packing V2: the film is embedded on `/pitch` from YouTube (Unlisted, https://youtu.be/BvJYe5-Hevo) with the local 74 MB MP4 as a fallback. Four professional artworks are stored under `public/images/v2/` (river sunrise, community hands, Bangladesh network, tube well) and are labelled **illustrative / AI-generated** — they are not photographs and not evidence. Five screenshot-style images supplied from the Pictures folder are retained under `public/images/packing/` for reference only; they contain unverified embedded statistics and testimonials and are not used as evidence. Product counts and impact statistics are kept separate on the page.
 - [Synthetic test evidence](docs/TEST_EVIDENCE.md): 11/11 A-K checks passed in the documented synthetic run; reported 100% traceability and 0% deadline hallucination apply only to those fixtures, not real-world quality.
 
 - [Test evidence and metrics](docs/TEST_EVIDENCE.md)
@@ -99,4 +101,4 @@ Open `/bn`, `/en`, or `/ar`. Build with `pnpm --ignore-workspace run build`; run
 - [New work boundary](HACKATHON_NEW.md)
 - [Architecture and global direction](02_ARCHITECTURE_GLOBAL.md)
 
-The active production alias returned HTTP 200 for `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger` on 2026-10-27. The live E2E report covers three synthetic text-only records through human approval. Audio upload, photo analysis, durable storage, and real participant data were not tested. Hackathon details are recorded against the [official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon). Submission status: NOT SUBMITTED.
+The active production alias returned HTTP 200 for `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/pillars/alive`, `/bn`, `/bn/new`, `/bn/ledger`, `/21raWHox`, and `/pitch` on 2026-10-28; `/videos/aLive_Bangladesh.mp4` returned 206 for a range request. The live E2E report covers three synthetic text-only records through human approval. Audio upload, photo analysis, durable storage, and real participant data were not tested. Hackathon details are recorded against the [official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon). Submission status: NOT SUBMITTED.

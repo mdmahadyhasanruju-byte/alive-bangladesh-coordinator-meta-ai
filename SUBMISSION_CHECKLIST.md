@@ -8,7 +8,7 @@
 
 ## New-work provenance
 
-- Verified acting-folder commits: `26c7287` — PEN + SCAFFOLD, 2026-10-27; `e8eb60a` — FIX BUILD, 2026-10-27; `c2e2cf0` — HACKATHON BUILD / evidence-linked MVP and release docs, 2026-10-27.
+- Verified acting-folder commits: `26c7287` — PEN + SCAFFOLD, 2026-10-27; `e8eb60a` — FIX BUILD, 2026-10-27; `c2e2cf0` — HACKATHON BUILD / evidence-linked MVP and release docs, 2026-10-27; `de836e3` — V2 professional packing: `/pitch` page, 74 MB film, poster, five reference JPEGs, 34 pages, 2026-10-28.
 
 ## Product and evidence
 
@@ -22,13 +22,14 @@
 
 ## Release status
 
-- V2 deployment: READY on 2026-10-27. Vercel deployment `dpl_6aQcCxhcNkJMkuzJVYUse6x2dYLg` deployed commit `0918d84` and assigned the production alias below.
-- V2 production HTTP checks: `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/pillars/alive`, `/21raWHox`, `/bn`, `/bn/new`, and `/bn/ledger` all returned HTTP 200 from `https://alive-bangladesh-coordinator-meta-a.vercel.app`.
-- Premium packing page: `/pitch` (Vercel HTTP check pending).
-- Video asset: `/videos/aLive_Bangladesh.mp4` (Vercel HTTP check pending; source file 3:21, 1920×1080, H.264/AAC).
-- YouTube Unlisted URL: TODO after upload; not yet verified.
-- Five supplied screenshot-style image references are in `public/images/packing/`. Their embedded mock statistics and testimonials are unverified and they are not presented as evidence. The four requested `/mnt/data/resource` artwork files were not available in this environment.
-- Demo video: integrated in app from the supplied file; external YouTube upload still TODO. No automatic recording was made.
+- Current deployment: READY on 2026-10-28. Vercel deployment `dpl_51Z5utC5VxDph7BQGDoDRqnPHabE` (`alive-bangladesh-coordinator-meta-ref1o6xal.vercel.app`) holds the production alias and includes the YouTube embed and the four V2 artworks.
+- Previous deployments: `dpl_2d2E1pcJtpqvC7V9hZsdroDdca68` built `de836e3` (pitch page + 74 MB film + poster + reference JPEGs), READY 2026-10-28 07:31 +06; `dpl_6aQcCxhcNkJMkuzJVYUse6x2dYLg` built `0918d84`, READY 2026-10-27.
+- Production HTTP checks on 2026-10-28 from `https://alive-bangladesh-coordinator-meta-a.vercel.app`: `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/pillars/alive`, `/bn`, `/bn/new`, `/bn/ledger`, `/21raWHox`, and `/pitch` all returned HTTP 200.
+- Premium packing page `/pitch`: HTTP 200, verified live; renders the YouTube iframe, the local MP4 fallback, and the four artworks.
+- Video asset `/videos/aLive_Bangladesh.mp4`: HTTP 206 for a range request (200 otherwise), 77,941,309 bytes; source 3:21, 1920×1080, H.264/AAC.
+- YouTube Unlisted URL: https://youtu.be/BvJYe5-Hevo — verified through YouTube oEmbed and the watch page (HTTP 200).
+- Four professional artworks are stored in `public/images/v2/` (river sunrise, community hands, Bangladesh network, tube well) and shown on `/pitch` labelled illustrative / AI-generated; they are not photographs and not evidence. Five supplied screenshot-style JPEGs remain in `public/images/packing/` for reference only; their embedded mock statistics and testimonials are unverified.
+- Submission video: the supplied documentary film is uploaded (Unlisted) and integrated. A screen-recording walkthrough of the synthetic flow was not made.
 - Production URL: https://alive-bangladesh-coordinator-meta-a.vercel.app (deployment READY; V2 route checks above returned HTTP 200). Build used Next.js 16.4.3 and completed on Vercel.
 - Vercel project `alive-bangladesh-coordinator-meta-ai` is connected to the public GitHub repository. Public curl checks returned HTTP 200 for `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger`.
 - Public GitHub URL: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai (PUBLIC; `master` pushed). No repository license has been selected or added.
@@ -43,6 +44,6 @@
 - [x] Deploy to Vercel and verify `/bn`, `/en`, `/ar`, `/bn/new`, and `/bn/ledger` return HTTP 200. Review route/API behavior with durable storage and server-side reviewer authentication before real participant use.
 - [x] Record the live synthetic text-only E2E run and its limits in [docs/LIVE_E2E_TEST.md](docs/LIVE_E2E_TEST.md).
 - [ ] Add server-side reviewer authentication and durable storage before exposing review actions publicly.
-- [ ] Record a three-minute synthetic-only demo and publish its URL; use a clean capture window that does not show private desktop content.
+- [ ] Record a three-minute synthetic-only **walkthrough** of the product flow and publish its URL; use a clean capture window that does not show private desktop content. The submission film (https://youtu.be/BvJYe5-Hevo) is uploaded, but it is the supplied documentary, not a product walkthrough.
 - [ ] Confirm the current submission form and submit before the official deadline.
 - [ ] Create [docs/POST_SUBMISSION_CUSTOM_DOMAIN.md](docs/POST_SUBMISSION_CUSTOM_DOMAIN.md) after submission, as requested; it has not been created because submission is not confirmed.

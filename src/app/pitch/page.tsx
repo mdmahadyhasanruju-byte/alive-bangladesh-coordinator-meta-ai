@@ -31,6 +31,15 @@ const features = [
   ['Designed to continue', 'A small, understandable workflow can support the next person in the chain.'],
 ];
 
+const artworks = [
+  ['/images/v2/image_20261028_070321.webp', 'Illustrative artwork: diverse hands holding rice seedlings above lotus leaves, with a wheelchair visible', 'Community hands · illustrative artwork'],
+  ['/images/v2/image_20261028_070314.webp', 'Illustrative artwork: a glowing network over a map of Bangladesh with health, education, community, and growth symbols', 'Bangladesh network · illustrative artwork'],
+  ['/images/v2/image_20261027_195010.webp', 'Illustrative watercolour artwork: a field coordinator with a notebook speaking to an older man beside a tube well at golden hour', 'Tube well at golden hour · illustrative watercolour'],
+];
+
+const YOUTUBE_URL = 'https://youtu.be/BvJYe5-Hevo';
+const YOUTUBE_EMBED = 'https://www.youtube.com/embed/BvJYe5-Hevo';
+
 function Arrow() {
   return <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>;
 }
@@ -42,7 +51,7 @@ export default function PitchPage() {
         <nav aria-label="Main navigation" className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4 sm:px-8">
           <a href="#top" className="min-w-0 text-lg font-bold tracking-tight">meUus <span className="font-normal text-emerald-800">/ aLive Bangladesh</span></a>
           <div className="hidden items-center gap-6 text-sm text-slate-600 md:flex">
-            <a href="#vision">Vision</a><a href="#ecosystem">Ecosystem</a><a href="#workflow">How it works</a><a href="#packing">Submission</a>
+            <a href="#film">Film</a><a href="#vision">Vision</a><a href="#ecosystem">Ecosystem</a><a href="#workflow">How it works</a><a href="#artwork">Artwork</a>
           </div>
           <a href="/bn/new" className="shrink-0 rounded-full bg-[#123d32] px-4 py-2 text-sm font-semibold text-white hover:bg-[#205846]">Try live demo <span className="ml-1 inline-block align-middle"><Arrow /></span></a>
         </nav>
@@ -73,8 +82,20 @@ export default function PitchPage() {
 
       <section id="film" className="mx-auto max-w-7xl scroll-mt-20 px-5 py-16 sm:px-8 sm:py-24">
         <div className="grid items-end gap-5 md:grid-cols-[.8fr_1.2fr]"><div><p className="text-xs font-semibold uppercase tracking-[.2em] text-emerald-800">The story</p><h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">A film about people and possibility.</h2></div><p className="max-w-2xl text-sm leading-6 text-slate-600">The supplied film runs about 3 minutes 21 seconds. It frames the community vision; the coordinator demo below demonstrates a separate synthetic, text-only workflow.</p></div>
-        <div className="mt-8 overflow-hidden rounded-[1.5rem] bg-black shadow-xl ring-1 ring-black/10"><video className="aspect-video w-full" controls preload="metadata" poster="/images/v2/video-poster.jpg"><source src="/videos/aLive_Bangladesh.mp4" type="video/mp4" />Your browser does not support embedded video. <a href="/videos/aLive_Bangladesh.mp4">Download the aLive Bangladesh film</a>.</video></div>
-        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500"><span>Video file: aLive_Bangladesh.mp4 · 1920 × 1080 · H.264/AAC</span><a className="underline" href="/videos/aLive_Bangladesh.mp4" download>Download video</a></div>
+        <div className="mt-6 flex flex-wrap items-center gap-2 text-xs">
+          <span className="rounded-full border border-emerald-800/25 bg-emerald-100 px-3 py-1 font-semibold text-emerald-900">Video DONE · YouTube Unlisted</span>
+          <span className="rounded-full border border-emerald-950/10 bg-white px-3 py-1 font-medium text-slate-600">Local MP4 · 74 MB</span>
+          <a href={YOUTUBE_URL} target="_blank" rel="noreferrer" className="break-all font-semibold text-emerald-800 underline">{YOUTUBE_URL}</a>
+        </div>
+        <div className="mt-6 overflow-hidden rounded-[1.5rem] bg-black shadow-xl ring-1 ring-black/10">
+          <iframe className="aspect-video w-full" src={YOUTUBE_EMBED} title="aLive Bangladesh — Evidence-Linked Coordinator (YouTube, Unlisted)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />
+        </div>
+        <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500"><span>YouTube · Unlisted · 1920 × 1080</span><a className="underline" href={YOUTUBE_URL} target="_blank" rel="noreferrer">Open on YouTube</a></div>
+        <div className="mt-8 rounded-2xl border border-emerald-950/10 bg-white p-4 sm:p-5">
+          <div className="flex flex-wrap items-center justify-between gap-2"><p className="text-sm font-semibold text-emerald-950">Local MP4 copy</p><span className="text-xs text-slate-500">Fallback if YouTube is blocked in the reviewer’s region</span></div>
+          <div className="mt-4 overflow-hidden rounded-[1.5rem] bg-black shadow-xl ring-1 ring-black/10"><video className="aspect-video w-full" controls preload="none" poster="/images/v2/video-poster.jpg"><source src="/videos/aLive_Bangladesh.mp4" type="video/mp4" />Your browser does not support embedded video. <a href="/videos/aLive_Bangladesh.mp4">Download the aLive Bangladesh film</a>.</video></div>
+          <div className="mt-3 flex flex-wrap items-center justify-between gap-2 text-xs text-slate-500"><span className="break-all">aLive_Bangladesh.mp4 · 74 MB · 1920 × 1080 · H.264/AAC</span><a className="underline" href="/videos/aLive_Bangladesh.mp4" download>Download video</a></div>
+        </div>
       </section>
 
       <section id="vision" className="scroll-mt-20 bg-[#123d32] text-white">
@@ -101,7 +122,28 @@ export default function PitchPage() {
 
       <section id="stats" className="border-y border-emerald-950/10 bg-[#edf3eb]"><div className="mx-auto max-w-7xl px-5 py-14 sm:px-8"><p className="text-xs font-semibold uppercase tracking-[.2em] text-emerald-800">Project at a glance</p><div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4">{[['09', 'Pillar routes'], ['03', 'Interface languages'], ['21', 'Zero-level reflection prompts'], ['01', 'Evidence-linked coordinator MVP']].map(([value, label]) => <div key={label} className="rounded-2xl bg-white p-5"><p className="text-3xl font-semibold tracking-tight text-emerald-950">{value}</p><p className="mt-2 text-sm text-slate-600">{label}</p></div>)}</div><p className="mt-4 text-xs text-slate-500">These are implementation counts, not participant or impact statistics. Reflection prompts are unvalidated and not diagnostic.</p></div></section>
 
-      <section id="packing" className="scroll-mt-20 mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24"><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><p className="text-xs font-semibold uppercase tracking-[.2em] text-emerald-800">Submission packing</p><h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">A clear first proof, with the next work visible.</h2><p className="mt-5 text-sm leading-7 text-slate-600">Built for the Meta Global AI Hackathon Startup Track and the Build for Your World theme. The existing aLive app and the new Human OS pages share one repository.</p><a className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#123d32] px-5 py-3 text-sm font-semibold text-white" href="https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai">Open public repository <Arrow /></a></div><div className="grid min-w-0 gap-3 sm:grid-cols-2">{[['Live pitch', '/pitch'], ['Bangla field visit', '/bn/new'], ['Human OS prototype', '/welcome'], ['Public source', 'github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai'], ['Test record', '11 synthetic A–K checks documented'], ['Video upload', 'TODO: YouTube Unlisted URL']].map(([title, detail]) => <div key={title} className="min-w-0 rounded-xl border border-emerald-950/10 bg-white p-4"><p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</p><p className="mt-2 break-words text-sm font-medium text-emerald-950">{detail}</p></div>)}</div></div><p className="mt-10 max-w-4xl break-words text-xs leading-5 text-slate-500">Artwork source note: supplied screenshot-style JPEGs are stored under <code className="break-all">public/images/packing</code> for reference only. They contain unverified mock statistics and testimonial text and are not displayed as evidence on this page. The four requested `/mnt/data/resource` files were unavailable; the video poster is a frame extracted from the supplied film.</p></section>
+      <section id="packing" className="scroll-mt-20 mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24"><div className="grid gap-10 lg:grid-cols-[.8fr_1.2fr]"><div><p className="text-xs font-semibold uppercase tracking-[.2em] text-emerald-800">Submission packing</p><h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">A clear first proof, with the next work visible.</h2><p className="mt-5 text-sm leading-7 text-slate-600">Built for the Meta Global AI Hackathon Startup Track and the Build for Your World theme. The existing aLive app and the new Human OS pages share one repository.</p><a className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#123d32] px-5 py-3 text-sm font-semibold text-white" href="https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai">Open public repository <Arrow /></a></div><div className="grid min-w-0 gap-3 sm:grid-cols-2">{[['Live pitch', '/pitch'], ['Film on YouTube', 'Unlisted · youtu.be/BvJYe5-Hevo'], ['Local MP4', '74 MB · /videos/aLive_Bangladesh.mp4'], ['Bangla field visit', '/bn/new'], ['Human OS prototype', '/welcome'], ['Test record', '11 synthetic A–K checks documented']].map(([title, detail]) => <div key={title} className="min-w-0 rounded-xl border border-emerald-950/10 bg-white p-4"><p className="text-xs font-semibold uppercase tracking-wide text-slate-500">{title}</p><p className="mt-2 break-all text-sm font-medium text-emerald-950">{detail}</p></div>)}</div></div>
+
+        <div id="artwork" className="mt-14 scroll-mt-20">
+          <div className="flex flex-wrap items-end justify-between gap-3"><div><p className="text-xs font-semibold uppercase tracking-[.2em] text-emerald-800">V2 professional packing</p><h3 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Four artworks for the pitch.</h3></div><span className="rounded-full border border-amber-600/30 bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-800">Illustrative · AI-generated</span></div>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-600">Professional artwork supplied for this packing. These are AI-generated illustrations, not photographs, and they are not evidence of people, participants, or outcomes.</p>
+          <figure className="mt-6 overflow-hidden rounded-[1.5rem] border border-emerald-950/10 bg-white">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/v2/image_20261028_070326.webp" alt="Illustrative artwork: river sunrise with boats, paddy fields, and the Dhaka skyline" className="aspect-[3/1] w-full object-cover" loading="lazy" />
+            <figcaption className="px-4 py-3 text-xs text-slate-500">River sunrise · illustrative artwork</figcaption>
+          </figure>
+          <div className="mt-3 grid gap-3 sm:grid-cols-3">
+            {artworks.map(([src, alt, caption]) => (
+              <figure key={src} className="min-w-0 overflow-hidden rounded-2xl border border-emerald-950/10 bg-white">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={src} alt={alt} className="aspect-[4/3] w-full object-cover" loading="lazy" />
+                <figcaption className="break-words px-3 py-2 text-xs text-slate-500">{caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+
+        <p className="mt-10 max-w-4xl break-words text-xs leading-5 text-slate-500">Artwork source note: the four V2 artworks are stored under <code className="break-all">public/images/v2</code> and labelled illustrative; they are AI-generated and are not photographs or evidence. Supplied screenshot-style JPEGs remain under <code className="break-all">public/images/packing</code> for reference only; they contain unverified mock statistics and testimonial text and are not displayed as evidence. The video poster is a frame extracted from the supplied film.</p></section>
 
       <footer className="border-t border-emerald-950/10 bg-white"><div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-7 text-xs text-slate-500 sm:px-8 md:flex-row md:items-center md:justify-between"><span>© aLive Bangladesh · inside the meUus ecosystem</span><span className="break-words">Evidence-linked · human-reviewed · synthetic demo</span><a href="/bn" className="font-semibold text-emerald-900">Open aLive <Arrow /></a></div></footer>
     </main>
