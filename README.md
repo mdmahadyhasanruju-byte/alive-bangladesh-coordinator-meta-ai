@@ -6,8 +6,8 @@
 
 Bismillah.
 
-**Submission ID:** f86f8d68-330f-4aee-8318-5e30c153f3
-**View Submission:** UNKNOWN — link redacted in the request; to confirm
+**Submission ID:** f86f8d68-330f-4aee-8318-5e30c153f31e
+**View Submission:** https://cerebralvalley.ai/e/meta-ai-developer-hackathon/hackathon/f86f8d68-330f-4aee-8318-5e30c153f31e/edit?backUrl=%2Fe%2Fmeta-ai-developer-hackathon (owner-only; the portal returns 404 to anonymous visitors)
 **Team Number:** 126 / 20,000
 **Deadline:** Nov 4 9PM ET = Nov 5 8AM BD — Submitted 6 days early
 
@@ -19,7 +19,7 @@ Bismillah.
 
 ### GitHub
 - **Public:** https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai
-- **Commits:** 16 total (11 on 2026-10-27, 5 on 2026-10-28) HEAD 53fa5b9 — 15 commits through aa71e1a jury-facing permanent
+- **Commits:** 16 commits through 53fa5b9 jury-facing (11 on 2026-10-27, 5 on 2026-10-28), now 17 total through aed194c (README update 2026-10-30) — 17 commits permanent through aed194c, verified via git log --date=short
 - **Build:** 34/34 pages Next.js 16.4.3, compiled 1590ms, TS 1181ms, 405ms static
 
 ### Video
@@ -51,5 +51,11 @@ Anyone can continue from anywhere; the weakest soul ever can continue through me
 - tube-well watercolour golden hour dignity
 
 ### Post-Submission
-- Keep live until judging — Team #126 — Submission ID f86f8d68...
+- Keep live until judging — Team #126 — Submission ID f86f8d68-330f-4aee-8318-5e30c153f31e
 - After judging: alive.meuus.org CNAME cname.vercel-dns.com, meuus.org/alivebangladesh 308 redirect
+
+### Limitations & Honest Gaps (as of 2026-10-28)
+- Supabase client helper present but SQL migration not applied — using in-memory Map store demo only
+- Models muse-voice-transcribe-1.0 + spark-1.3 + wonder-1.0 + image-1.0 + sam-3.1 configured in src/adapters/config.ts but recorded E2E uses synthetic fixtures bn_01_60s.txt en_01_60s.txt ar_01_60s.txt — no real PII, no live API call in video
+- Walkthrough not recorded separately — demo video 3:21 documentary includes workflow
+- 100% traceability / 0% hallucination measured on synthetic A-K fixtures only — not on real field data
