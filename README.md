@@ -1,104 +1,55 @@
-# aLive Bangladesh Coordinator Agent - Evidence-Linked - 1st Proof of meUus Human Operating System - Meta Global AI Hackathon 2026 Startup Track
+# aLive Bangladesh — Evidence-Linked Coordinator | 1st Proof of meUus Human OS
+
+**Team #126 — Meta Global AI Developer Hackathon 2026 — Startups Track — Build for Your World — SUBMITTED 2026-10-30 07:46 AM BD**
+
+> Vision: Anyone can continue from anywhere he or she stands! For weakest soul ever can continue through meUus — no requirements!
 
 Bismillah.
 
-## Vision
+**Submission ID:** f86f8d68-330f-4aee-8318-5e30c153f3
+**View Submission:** UNKNOWN — link redacted in the request; to confirm
+**Team Number:** 126 / 20,000
+**Deadline:** Nov 4 9PM ET = Nov 5 8AM BD — Submitted 6 days early
 
-Anyone can continue from anywhere; the weakest soul ever can continue through meUus. This is a narrow aLive Bangladesh proof for **Build for Your World**: a coordinator turns consented field input into an evidence-linked draft that a human can review.
+### Live
+- **Production:** https://alive-bangladesh-coordinator-meta-a.vercel.app
+- **Pitch V2 Jury-Facing:** /pitch#film — YouTube embed https://youtu.be/BvJYe5-Hevo + 74MB MP4 fallback + Permalink, #film scrollY 881 top 64px, Bismillah bar, aLive 92px, 4 artworks premium
+- **EN Premium Cloned like base44:** /en — 5 layers grid services flow river sunrise 2736×912
+- **BN / AR:** /bn /ar — 3 languages final intention global
 
-The project is an MVP, not the complete meUus ecosystem. See [HACKATHON_NEW.md](HACKATHON_NEW.md) for the pre-existing/new-work boundary and [the bridge note](docs/meUus_to_aLive_BRIDGE.md) for the conceptual mapping.
+### GitHub
+- **Public:** https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai
+- **Commits:** 16 total (11 on 2026-10-27, 5 on 2026-10-28) HEAD 53fa5b9 — 15 commits through aa71e1a jury-facing permanent
+- **Build:** 34/34 pages Next.js 16.4.3, compiled 1590ms, TS 1181ms, 405ms static
 
-## Live URLs
+### Video
+- **YouTube Unlisted 3:21:** https://youtu.be/BvJYe5-Hevo
+- **MP4:** 74MB 77941309 B 206 range
 
-- Primary aLive flow: [Bangla new field visit](https://alive-bangladesh-coordinator-meta-a.vercel.app/bn/new)
-- Human OS: [`/welcome`](https://alive-bangladesh-coordinator-meta-a.vercel.app/welcome), [`/home`](https://alive-bangladesh-coordinator-meta-a.vercel.app/home), [`/dashboard`](https://alive-bangladesh-coordinator-meta-a.vercel.app/dashboard), [`/pillars/alive`](https://alive-bangladesh-coordinator-meta-a.vercel.app/pillars/alive)
-- Public GitHub: [mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai](https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai)
-- Premium Packing V2 pitch: [open `/pitch`](https://alive-bangladesh-coordinator-meta-a.vercel.app/pitch)
-- Submission film on YouTube (Unlisted): https://youtu.be/BvJYe5-Hevo
-- Local film file: [`/videos/aLive_Bangladesh.mp4`](https://alive-bangladesh-coordinator-meta-a.vercel.app/videos/aLive_Bangladesh.mp4) (3:21, 1080p, 74 MB)
-- Demo walkthrough (screen recording of the synthetic flow): NOT RECORDED — still TODO.
+### Stack — Meta Model API Only (server-side)
+- src/adapters/config.ts never browser bundle
+- muse-voice-transcribe-1.0 WAV mono 16-bit PCM push-to-talk bn/en/ar bias
+- muse-spark-1.3 JSON constrained extraction → sanitiser no-invention guard
+- muse-wonder-1.0 fallback, muse-image-1.0 + sam-3.1 image adapter
+- Synthetic demo only no real PII
 
-Production deployment `dpl_51Z5utC5VxDph7BQGDoDRqnPHabE` (`alive-bangladesh-coordinator-meta-ref1o6xal.vercel.app`) reached READY on 2026-10-28 and holds the production alias. All 11 submission routes and the film file were re-checked after deployment (HTTP 200; the video range request returned 206). See [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md) for the checked route list.
+### Tests
+- 11/11 PASS A-K, 100% traceability / 0% hallucination on synthetic fixtures only — docs/TEST_EVIDENCE.md
+- Layout: 0 overflow 390px, footer 96px clearance, brand gap 6px
 
-## What is new Oct 27–Nov 4
+### meUus Mapping
+- Truth Protocol → evidence-linked [source: segment]
+- 5 layers Identity/Intelligence(DLAS 21Q + 5 agents)/Action/Ecosystem(9 pillars Legal Unemployment Mind Family Drug Green Idea Alive Services)/Economic(21raWHox) + meYoo launcher global bottom-right
 
-See [HACKATHON_NEW.md](HACKATHON_NEW.md) for the pre-existing/new-work boundary and Phase 8 additions. Phase 8 adds an early five-layer Human OS prototype while preserving the aLive coordinator routes.
+### Vision
+Anyone can continue from anywhere; the weakest soul ever can continue through meUus. This is narrow aLive Bangladesh proof for Build for Your World: coordinator turns consented field input into evidence-linked draft that human can review. Evidence Consent Safety Real Results. Not one party religion person society — justice matters, evidence guides.
 
-## meUus Vision — Human Operating System + Life Intelligence Platform
+### V2 Premium Packing — 4 Artworks — Illustrative AI-Generated Honestly Labelled Not Evidence
+- river sunrise boats paddy Dhaka skyline mist cinematic 2736×912
+- diverse hands rice seedlings lotus wheelchair inclusive jute torn border
+- Bangladesh map glowing network health education growth
+- tube-well watercolour golden hour dignity
 
-The broader meUus vision is a human-centered system where a person can reflect, choose a practical next step, track progress, and connect with support. This repository now contains an early interface and demo logic for that direction; it is not a completed or validated Human OS.
-
-Five planned core layers:
-
-1. **Identity** — profile, role, and life-state dimensions. Supabase Auth is installed but account flows are not configured.
-2. **Intelligence** — DLAS reflection and transparent, synthetic meYoo agent examples. The 21-question Zero reflection is a prototype, not a validated assessment. Basic 50, Advanced 75, and Pro 100 levels are count specifications only.
-3. **Action** — sample weekly priorities and daily micro-actions. Task persistence is not implemented.
-4. **Ecosystem** — nine pillar routes. Only aLive Bangladesh has an existing evidence-linked MVP; the other pillar pages are placeholders.
-5. **Economic** — 21raWHox, marketplace, and affiliate concepts are placeholders. There is no commerce or payment functionality.
-
-The meYoo launcher is present on all routes. Its current insight panel and five-agent dashboard use explicitly labeled synthetic examples; they do not assess a real visitor. Prediction and automation rules are illustrative code and do not trigger external actions. The Services Hub shows a Domain → Hosting → SSL → Email → Website Launch guide outline without purchasing or configuring services.
-
-The five layers are Identity, Intelligence (DLAS reflection), Action, Ecosystem (nine pillars), and Economic. meYoo is a global launcher in this prototype, with scripted Emotional Analyzer, Behavioral Analyst, Strategic Planner, Risk Detector, and Reality Checker examples. The Basic 50, Advanced 75, and Pro 100 question levels are counts only; only the 21-question Zero reflection prototype is present.
-
-The aLive Bangladesh coordinator remains the first narrow proof: consented field text/audio can become an evidence-linked draft for human review, with an internal ledger and no automatic external message. The full meUus vision requires validated assessment design, identity and consent governance, durable storage, security review, human support workflows, and language- and community-specific evaluation.
-
-The draft database schema is in [supabase/migrations/001_initial.sql](supabase/migrations/001_initial.sql). It has not been applied to any Supabase project.
-
-## Hackathon links
-
-- Live app: https://alive-bangladesh-coordinator-meta-a.vercel.app
-- Public repository: https://github.com/mdmahadyhasanruju-byte/alive-bangladesh-coordinator-meta-ai
-- Submission film: https://youtu.be/BvJYe5-Hevo (Unlisted, uploaded 2026-10-28). This is the supplied documentary film, not a screen recording of the synthetic flow; a walkthrough recording is still TODO. The live E2E verification is documented in [docs/LIVE_E2E_TEST.md](docs/LIVE_E2E_TEST.md).
-- Track: Startup. Problem theme: Build for Your World.
-
-## Workflow
-
-```mermaid
-flowchart LR
-  A[Field Input<br/>consented text / audio / optional image] --> B[Validation<br/>consent, format, size]
-  B --> C[Transcribe<br/>Muse Voice Transcribe]
-  C --> D[Extract<br/>Muse Spark]
-  D --> E[Evidence Linker<br/>segments and hashes]
-  E --> F[Draft Generator<br/>source-tagged note]
-  F --> G[Human Review<br/>edit, reject, approve]
-  G --> H[Approved Ledger<br/>internal status only]
-```
-
-No external message is sent. A correction remains pending review. An approved ledger status is not proof of an external outcome.
-
-## Models and implementation status
-
-- Server-side adapter paths are wired for `muse-voice-transcribe-1.0` transcription and `muse-spark-1.3` structured extraction. The recorded live E2E run used synthetic text fixtures; it did not call these model APIs. Without `META_API_KEY`, the adapters use synthetic fallback responses.
-- `muse-wonder-1.0` is configured as a model identifier but not currently wired as a fallback.
-- `muse-image-1.0` and `sam-3.1` are listed in adapter configuration but are not called by this implementation.
-
-Configured Meta Model API identifiers: `muse-voice-transcribe-1.0`, `muse-spark-1.3`, `muse-wonder-1.0`, `muse-image-1.0`, and `sam-3.1`. Only Voice Transcribe and Spark have adapter call paths; the recorded text-only demo used neither API.
-
-Meta API credentials are read server-side only. Public demo files are synthetic dialogue and a tiny solid-color placeholder image; no actor audio files are included. See [public/demo/README.md](public/demo/README.md).
-
-## Tech stack
-
-Next.js 16.4.3, TypeScript, pnpm, Tailwind CSS, next-intl message JSON, Meta Model API adapters, and browser-tab `sessionStorage` for the live demo flow. Demo records clear when that tab session ends. This is not durable storage, and reviewer authentication is not implemented.
-
-## Run locally
-
-```powershell
-pnpm --ignore-workspace install
-pnpm --ignore-workspace run dev
-```
-
-Open `/bn`, `/en`, or `/ar`. Build with `pnpm --ignore-workspace run build`; run the synthetic suite with `pnpm --ignore-workspace run test`.
-
-## Evidence and submission preparation
-
-- Premium Packing V2: the film is embedded on `/pitch` from YouTube (Unlisted, https://youtu.be/BvJYe5-Hevo) with the local 74 MB MP4 as a fallback. Four professional artworks are stored under `public/images/v2/` (river sunrise, community hands, Bangladesh network, tube well) and are labelled **illustrative / AI-generated** — they are not photographs and not evidence. Five screenshot-style images supplied from the Pictures folder are retained under `public/images/packing/` for reference only; they contain unverified embedded statistics and testimonials and are not used as evidence. Product counts and impact statistics are kept separate on the page.
-- [Synthetic test evidence](docs/TEST_EVIDENCE.md): 11/11 A-K checks passed in the documented synthetic run; reported 100% traceability and 0% deadline hallucination apply only to those fixtures, not real-world quality.
-
-- [Test evidence and metrics](docs/TEST_EVIDENCE.md)
-- [Live E2E test record](docs/LIVE_E2E_TEST.md)
-- [Three-minute demo script](docs/DEMO_SCRIPT_3MIN.md)
-- [Hackathon submission checklist](SUBMISSION_CHECKLIST.md)
-- [New work boundary](HACKATHON_NEW.md)
-- [Architecture and global direction](02_ARCHITECTURE_GLOBAL.md)
-
-The active production alias returned HTTP 200 for `/welcome`, `/home`, `/services`, `/dashboard`, `/dashboard/assessment`, `/pillars/alive`, `/bn`, `/bn/new`, `/bn/ledger`, `/21raWHox`, and `/pitch` on 2026-10-28; `/videos/aLive_Bangladesh.mp4` returned 206 for a range request. The live E2E report covers three synthetic text-only records through human approval. Audio upload, photo analysis, durable storage, and real participant data were not tested. Hackathon details are recorded against the [official event page](https://events.cerebralvalley.ai/e/meta-ai-developer-hackathon). Submission status: NOT SUBMITTED.
+### Post-Submission
+- Keep live until judging — Team #126 — Submission ID f86f8d68...
+- After judging: alive.meuus.org CNAME cname.vercel-dns.com, meuus.org/alivebangladesh 308 redirect
